@@ -1,0 +1,50 @@
+html {
+    font-size: 65.5%;
+}
+
+body {
+    font-family: "Public Sans", sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px;
+    background-color: #ffffff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 2rem;
+}
+
+.lista-menu {
+    display: flex;
+    align-items: center;
+}
+
+.lista-menu li a {
+    padding: 10px 5px;
+    transition: 0.3s ease-in-out;
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.lista-menu li a:hover {
+    background-color: #5BC241;
+    color: #ffffff;
+}
+
+.lista-menu li a.botao {
+    background-color: #5BC241;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-left: 3rem;
+    padding: 10px 20px;
+}

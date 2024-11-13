@@ -1,90 +1,65 @@
-* {
-    padding: 0;
-    margin: 0;
+html {
     font-family: "Roboto", sans-serif;
 }
 
 .container {
+    background-color: #f7f7f7;
     max-width: 900px;
-    max-height: 420px;
-    padding: 20px;
     display: grid;
-    grid: 
-        "principal sider" 415px / 540px 360px;
-
+    grid-template-areas: "video-destaque propaganda"
+                         "video-destaque videos-sugeridos";
+    grid-template-columns: 1fr 270px;
+    grid-template-rows: 56px 1fr;
+    gap: 20px;
+    padding: 30px;
 }
 
-.principal {
-    grid: flex;
-    flex-direction: column;
-    grid-area: principal;
+.video-destaque {
+    grid-area: video-destaque;
 }
 
-.sider {
-    grid: flex;
-    flex-direction: column;
-    grid-area: sider;
-    margin-left: 20px;
+.video-destaque img {
+    margin-bottom: 12px;
+    width: 100%;
 }
 
-.informacoes-video h1 {
+.video-destaque .titulo {
     font-size: 18px;
-    margin: 10px 0;
+    margin-bottom: 7px;
 }
 
-.informacoes-video p {
-    font-weight: 300;
+.video-destaque .visualizacoes {
     font-size: 14px;
-    margin: 10px 0;
-}
-
-.sider p {
-    font-size: 11px;
+    margin-bottom: 7px;
     font-weight: 300;
 }
 
-.sider h2 {
+.video-destaque p {
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 300;
 }
 
 .propaganda {
-    position: relative;
-    width: 270px;
-    height: 56px;
-    margin-bottom: 20px;
+    grid-area: propaganda;
 }
 
-.propaganda img {
-    display: block;
-    width: 100%;
-    height: 100%;
+.videos-sugeridos {
+    grid-area: videos-sugeridos;
 }
 
-.propaganda p {
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    margin: 0;
-    transform: translate(-50%, -50%);
-    text-align: center;
+.videos-sugeridos .video {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.videos-sugeridos .video .titulo {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.videos-sugeridos .video p {
     font-size: 11px;
+    margin-bottom: 5px;
     font-weight: 300;
-}
-
-.proximos-videos {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.novo-video {
-    display: flex;
-}
-
-.informacoes-novo-video {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 5px;
 }
